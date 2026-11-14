@@ -38,7 +38,7 @@ curl --cacert lab-ca.pem --resolve legacy.lab.test:8441:127.0.0.1 https://legacy
 
 ## Fixing
 
-- Server configuration: `conf/<service>.conf`. After a change: `docker compose restart <service>`.
+- Server configuration: `conf/<service>/default.conf`. After a change: `docker compose restart <service>`.
   If the service does not start, read `docker compose logs <service>`.
 - New certificate from the lab CA: `./pki/issue.sh <service> <dns-name> [<dns-name>...]`,
   then restart the service. For `vhosts`, the certificates are `app` and `www`.
